@@ -36,3 +36,26 @@ function CambiarUnidades(id,valor){
 
     }
 }
+function convertirGR(id){
+    var grad;
+    var rad;
+    if(id=="grados"){
+        grad=document.getElementById(elementld:"grados").value:
+        rad=(grad*Math.PI)/180;
+    }
+    else if (id=="radianes"){
+        rad=document.getElementById(elementld:"radianes").value;
+        grad=(rad*180)/Math.PI;
+    }
+    document.getElementById(elementld:"grados").value=grad;
+    document.getElementById(elementld:"radianes").value=rad;
+
+}
+function mostrar_ocultar(valorMO) {
+if(valorMO==val_mostrar){
+    document.getElementById(elementld"divMO").style.display='block';
+}else if(valorMO=="val_ocultar"){
+    document.getElementById(elementld"divMO").style.display='none';
+}
+
+}
