@@ -40,51 +40,65 @@ function convertirGR(id){
     var grad;
     var rad;
     if(id=="grados"){
-        grad=document.getElementById(elementld:"grados").value:
+        grad=document.getElementById("grados").value:
         rad=(grad*Math.PI)/180;
     }
     else if (id=="radianes"){
-        rad=document.getElementById(elementld:"radianes").value;
+        rad=document.getElementById("radianes").value;
         grad=(rad*180)/Math.PI;
     }
-    document.getElementById(elementld:"grados").value=grad;
-    document.getElementById(elementld:"radianes").value=rad;
+    document.getElementById("grados").value=grad;
+    document.getElementById("radianes").value=rad;
 
 }
 function mostrar_ocultar(valorMO) {
 if(valorMO==val_mostrar){
-    document.getElementById(elementld"divMO").style.display='block';
+    document.getElementById("divMO").style.display='block';
 }else if(valorMO=="val_ocultar"){
-    document.getElementById(elementld"divMO").style.display='none';
+    document.getElementById("divMO").style.display='none';
 }
 
 }
 function calularSuma(){
     var num1,num2;
-    num1=Number(document.getElementsByName( elementName: "sum_num1")[0].value);
-    num2=Number(document.getElementsByName( elementName: "sum_num2")[0].value);
-document.getElementsByName(elementName:"sum_total")[0].innerHTML=num1 + num2;
+    num1=Number(document.getElementsByName(  "sum_num1")[0].value);
+    num2=Number(document.getElementsByName(  "sum_num2")[0].value);
+document.getElementsByName("sum_total")[0].innerHTML=num1 + num2;
 }
 function calcularResta() {
     var num1,num2;
-    num1=Number(document.getElementsByName( elementName: "res_num1")[0].value);
-    num2=Number(document.getElementsByName( elementName: "res_num2")[0].value);
-    document.getElementsByName(elementName:"res_total")[0].innerHTML=num1 - num2;
+    num1=Number(document.getElementsByName(  "res_num1")[0].value);
+    num2=Number(document.getElementsByName(  "res_num2")[0].value);
+    document.getElementsByName("res_total")[0].innerHTML=num1 - num2;
 }
 function calcularMultiplicacion() {
     var num1,num2;
-    num1=Number(document.getElementsByName( elementName: "mul_num1")[0].value);
-    num2=Number(document.getElementsByName( elementName: "mul_num1")[0].value);
-    document.getElementsByName(elementName:"mul_total")[0].innerHTML=num1 * num2;
+    num1=Number(document.getElementsByName(  "mul_num1")[0].value);
+    num2=Number(document.getElementsByName(  "mul_num1")[0].value);
+    document.getElementsByName("mul_total")[0].innerHTML=num1 * num2;
 
 }
 function calcularDivision() {
     var num1, num2;
-    num1=Number(document.getElementsByName( elementName: "div_num1")[0].value);
-    num2=Number(document.getElementsByName( elementName: "div_num2")[0].value);
-    document.getElementsByName(elementName:"div_total")[0].innerHTML=num1/num2;
+    num1=Number(document.getElementsByName(  "div_num1")[0].value);
+    num2=Number(document.getElementsByName(  "div_num2")[0].value);
+    document.getElementsByName("div_total")[0].innerHTML=num1/num2;
 
 
+}
+function cargarWeb() {
+    var cant,unidad,urlComp;
+    cant=document.getElementById("distancia").value;
+    unidad=document.getElementsByName( "unidades")[0].value;
+urlComp="segundaWeb.html#" + cant+ "#" + unidad;
+window.open (urlComp);
+}
+function cargarResultado() {
+var urlComp, can,un;
+urlComp=window.location.href.split( "/")[5];
+can=urlComp.split("#")[1];
+un=urlComp.split("#")[2];
+document.getElementById("dist").value=can + " " + un;
 }
 
 
