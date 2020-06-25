@@ -149,7 +149,7 @@ function dibujarCuadriculado() {
     for (var i=0-;i<alturaMax;) {
         ctx.moveTo(0, i);
         ctx.lineTo(anchoMax, i);
-        ctx.strokeStyle = "#3e67d9";
+        ctx.strokeStyle = "#8e06c1";
         ctx.stroke();
         i=i+20;
     }
@@ -214,6 +214,7 @@ function animarAuto() {
     }
     x+=dx;
 }
+
 
 
 
